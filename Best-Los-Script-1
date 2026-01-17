@@ -1,0 +1,612 @@
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Turtle-Brand/Turtle-Lib/main/source.lua"))()
+
+local allowedIds = {4016679867, 4668310414, 2852863764, 8011710599}
+local player = game.Players.LocalPlayer
+local userId = player.UserId
+
+local function isAllowed()
+    for _, id in ipairs(allowedIds) do
+        if userId == id then
+            return true
+        end
+    end
+    return false
+end
+
+if isAllowed() then
+    -- Whitelisted player message for 8011710599
+    if userId == 8011710599 or 4016679867 or 4668310414 or 2852863764 then
+        local screenGui = Instance.new("ScreenGui")
+        screenGui.Parent = game.CoreGui
+
+        local frame = Instance.new("Frame")
+        frame.Size = UDim2.new(0, 200, 0, 50)
+        frame.Position = UDim2.new(0.5, -100, 0.5, -25)
+        frame.BackgroundColor3 = Color3.new(0, 0, 0)
+        frame.BackgroundTransparency = 0.5
+        frame.Parent = screenGui
+
+        local text = Instance.new("TextLabel")
+        text.Size = UDim2.new(1, 0, 1, 0)
+        text.Text = "Player recently whitelisted"
+        text.TextColor3 = Color3.new(1, 1, 1)
+        text.Parent = frame
+
+        wait(3)
+        screenGui:Destroy()
+    end
+
+    -- Main script functionality for authorized users
+    local window = library:Window("Made by Poltergeist")
+
+    -- Ethereal Orb City Toggle
+    window:Toggle("Ethereal Orb City", false, function(Value)
+        if Value then
+            _G.loop = true
+            while _G.loop == true do wait()
+                for i = 1, 1000 do
+                    game:GetService("ReplicatedStorage").rEvents.orbEvent:FireServer("collectOrb", "Ethereal Orb", "City")
+                end
+                wait(3)
+            end
+        else
+            _G.loop = false
+        end
+    end)
+
+	-- Ethereal Orb Snow City Toggle
+    window:Toggle("Ethereal Orb Snow City", false, function(Value)
+        if Value then
+            _G.loop = true
+            while _G.loop == true do wait()
+                for i = 1, 1000 do
+                    game:GetService("ReplicatedStorage").rEvents.orbEvent:FireServer("collectOrb", "Ethereal Orb", "Snow City")
+                end
+                wait(3)
+            end
+        else
+            _G.loop = false
+        end
+    end)
+
+	-- Ethereal Orb Magma City Toggle
+    window:Toggle("Ethereal Orb Magma City", false, function(Value)
+        if Value then
+            _G.loop = true
+            while _G.loop == true do wait()
+                for i = 1, 1000 do
+                    game:GetService("ReplicatedStorage").rEvents.orbEvent:FireServer("collectOrb", "Ethereal Orb", "Magma City")
+                end
+                wait(3)
+            end
+        else
+            _G.loop = false
+        end
+    end)
+
+	-- Ethereal Orb Legends Highway Toggle
+    window:Toggle("Ethereal Orb Legends Highway", false, function(Value)
+        if Value then
+            _G.loop = true
+            while _G.loop == true do wait()
+                for i = 1, 1000 do
+                    game:GetService("ReplicatedStorage").rEvents.orbEvent:FireServer("collectOrb", "Ethereal Orb", "Legends Highway")
+                end
+                wait(3)
+            end
+        else
+            _G.loop = false
+        end
+    end)
+
+	-- Ethereal Orb Speed Jungle Toggle
+    window:Toggle("Ethereal Orb Jungle", false, function(Value)
+        if Value then
+            _G.loop = true
+            while _G.loop == true do wait()
+                for i = 1, 1000 do
+                    game:GetService("ReplicatedStorage").rEvents.orbEvent:FireServer("collectOrb", "Ethereal Orb", "Speed Jungle")
+                end
+                wait(3)
+            end
+        else
+            _G.loop = false
+        end
+    end)
+
+    -- Red Orb City Toggle
+    window:Toggle("Red Orb City", false, function(Value)
+        if Value then
+            _G.loop = true
+            while _G.loop == true do wait()
+                for i = 1, 1000 do
+                    game:GetService("ReplicatedStorage").rEvents.orbEvent:FireServer("collectOrb", "Red Orb", "City")
+                end
+                wait(3)
+            end
+        else
+            _G.loop = false
+        end
+    end)
+
+	-- Red Orb Snow City Toggle
+    window:Toggle("Red Orb Snow City", false, function(Value)
+        if Value then
+            _G.loop = true
+            while _G.loop == true do wait()
+                for i = 1, 1000 do
+                    game:GetService("ReplicatedStorage").rEvents.orbEvent:FireServer("collectOrb", "Red Orb", "Snow City")
+                end
+                wait(3)
+            end
+        else
+            _G.loop = false
+        end
+    end)
+
+	-- Red Orb Magma City Toggle
+    window:Toggle("Red Orb Magma City", false, function(Value)
+        if Value then
+            _G.loop = true
+            while _G.loop == true do wait()
+                for i = 1, 1000 do
+                    game:GetService("ReplicatedStorage").rEvents.orbEvent:FireServer("collectOrb", "Red Orb", "Magma City")
+                end
+                wait(3)
+            end
+        else
+            _G.loop = false
+        end
+    end)
+
+	-- Red Orb Legends Highway Toggle
+    window:Toggle("Red Orb Legends Highway", false, function(Value)
+        if Value then
+            _G.loop = true
+            while _G.loop == true do wait()
+                for i = 1, 1000 do
+                    game:GetService("ReplicatedStorage").rEvents.orbEvent:FireServer("collectOrb", "Red Orb", "Legends Highway")
+                end
+                wait(3)
+            end
+        else
+            _G.loop = false
+        end
+    end)
+
+	-- Red Orb Speed Jungle Toggle
+    window:Toggle("Red Orb Jungle", false, function(Value)
+        if Value then
+            _G.loop = true
+            while _G.loop == true do wait()
+                for i = 1, 1000 do
+                    game:GetService("ReplicatedStorage").rEvents.orbEvent:FireServer("collectOrb", "Red Orb", "Speed Jungle")
+                end
+                wait(3)
+            end
+        else
+            _G.loop = false
+        end
+    end)
+
+    -- Anti-AFK Button
+    window:Button("Anti afk", function()
+        local VirtualUser = game:GetService("VirtualUser")
+        local LocalPlayer = game.Players.LocalPlayer
+
+        LocalPlayer.Idled:Connect(function()
+            VirtualUser:CaptureController()
+            VirtualUser:ClickButton2(Vector2.new())
+        end)
+
+        game.StarterGui:SetCore("SendNotification", {
+            Title = "AFK",
+            Text = "Anti AFK Activated!",
+            Duration = 5
+        })
+    end)
+
+    --- Red Orb Speed Jungle Toggle
+    local isRunning = false
+
+    window:Toggle("Ethereal snow", false, function(Value)
+        isRunning = Value
+        if isRunning then
+         spawn(function()
+             while isRunning do
+                  if not isRunning then break end
+                  game:GetService("ReplicatedStorage").rEvents.orbEvent:FireServer("collectOrb", "Ethereal Orb", "Snow City")
+                  task.wait(0.00000000001) -- Small delay to prevent overwhelming the server
+                end
+            end)
+        end
+    end)
+
+
+-- Ethereal Orb Snow City Toggle
+local isRunning = false
+local connection = nil
+
+window:Toggle("Ethereal Orb Snow City", false, function(Value)
+    if Value then
+        isRunning = true
+        connection = game:GetService("RunService").Heartbeat:Connect(function()
+            if isRunning then
+                for i = 1, 10 do  -- Collect 10 orbs per frame
+                    game:GetService("ReplicatedStorage").rEvents.orbEvent:FireServer("collectOrb", "Ethereal Orb", "Snow City")
+                end
+            else
+                if connection then
+                    connection:Disconnect()
+                    connection = nil
+                end
+            end
+        end)
+    else
+        isRunning = false
+    end
+end)
+
+
+
+
+
+
+
+	-- Main script functionality for authorized users
+    local window1 = library:Window("Made by Poltergeist")
+
+	-- TP to City Button
+    window1:Button("TP to City", function()
+        local plr = game.Players.LocalPlayer
+        local char = plr.Character
+        if char then
+            char.HumanoidRootPart.CFrame = CFrame.new(-9685.48, 58.88, 3096.70, 1.00, -0.00, 0.02, 0.00, 1.00, 0.00, -0.02, -0.00, 1.00)
+        end
+    end)
+
+	-- TP to Snow city Button
+    window1:Button("TP to Snow City", function()
+        local plr = game.Players.LocalPlayer
+        local char = plr.Character
+        if char then
+            char.HumanoidRootPart.CFrame = CFrame.new(-9674.33, 58.88, 3784.83, -1.00, -0.00, -0.07, -0.00, 1.00, 0.00, 0.07, 0.00, -1.00)
+        end
+    end)
+
+	-- TP to Magma City Button
+    window1:Button("TP to Magma City", function()
+        local plr = game.Players.LocalPlayer
+        local char = plr.Character
+        if char then
+            char.HumanoidRootPart.CFrame = CFrame.new(-11053.17, 216.84, 4901.31, -1.00, -0.00, -0.01, -0.00, 1.00, 0.00, 0.01, 0.00, -1.00)
+        end
+    end)
+
+	-- TP to Legends Highway Button
+    window1:Button("TP to Legends Highway", function()
+        local plr = game.Players.LocalPlayer
+        local char = plr.Character
+        if char then
+            char.HumanoidRootPart.CFrame = CFrame.new(-13096.54, 216.84, 5910.15, -1.00, 0.00, 0.04, 0.00, 1.00, 0.00, -0.04, 0.00, -1.00)
+        end
+    end)
+
+	-- TP to Speed Jungle Button
+    window1:Button("TP to Speed Jungle", function()
+        local plr = game.Players.LocalPlayer
+        local char = plr.Character
+        if char then
+            char.HumanoidRootPart.CFrame = CFrame.new(-15271.71, 398.20, 5574.44, -1.00, -0.00, -0.02, -0.00, 1.00, 0.00, 0.02, 0.00, -1.00)
+        end
+    end)
+
+	-- TP to Grassland race Button
+    window1:Button("TP to Grassland win", function()
+        local plr = game.Players.LocalPlayer
+        local char = plr.Character
+        if char then
+            char.HumanoidRootPart.CFrame = CFrame.new(1680, 1, -5945)
+        end
+    end)
+
+	-- TP to Magma race Button
+    window1:Button("TP to Magma win", function()
+        local plr = game.Players.LocalPlayer
+        local char = plr.Character
+        if char then
+            char.HumanoidRootPart.CFrame = CFrame.new(990, 1, -10988)
+        end
+    end)
+
+	-- TP to Desert race Button
+    window1:Button("TP to Desert win", function()
+        local plr = game.Players.LocalPlayer
+        local char = plr.Character
+        if char then
+            char.HumanoidRootPart.CFrame = CFrame.new(50, 1, -8681)
+        end
+    end)
+
+	-- TP to Space race Button
+    window1:Button("TP to Space win", function()
+        local plr = game.Players.LocalPlayer
+        local char = plr.Character
+        if char then
+            char.HumanoidRootPart.CFrame = CFrame.new(-4364, 1, -14038)
+        end
+    end)
+
+	-- TP to Speedway race Button
+    window1:Button("TP to Speedway win", function()
+        local plr = game.Players.LocalPlayer
+        local char = plr.Character
+        if char then
+            char.HumanoidRootPart.CFrame = CFrame.new(2052, 1, 17931)
+        end
+    end)
+
+	-- Join race Button
+    window1:Button("Join/fill race", function()
+        for i = 1, 3 do
+			local args = {
+				[1] = "joinRace"
+			}
+			game.ReplicatedStorage:WaitForChild("rEvents"):WaitForChild("raceEvent"):FireServer(unpack(args))
+		end
+    end)
+
+	-- Main script functionality for authorized users
+    local window2 = library:Window("Made by Poltergeist")
+
+	-- Silver Dog Toggle
+    window2:Toggle("(Basic) Silver Dog", false, function(Value)
+        if Value then 
+			_G.loop = true 
+			while _G.loop == true do wait(0.5) 
+				local args = { 
+
+					[1] = game:GetService("ReplicatedStorage"):WaitForChild("cPetShopFolder"):WaitForChild("Silver Dog") 
+
+				} 
+				game:GetService("ReplicatedStorage"):WaitForChild("cPetShopRemote"):InvokeServer(unpack(args)) 
+
+			end 
+		else 
+			_G.loop = false 
+		end 
+    end)
+
+	-- Silver Dog Toggle
+    window2:Toggle("(Basic) Yellow Squeak", false, function(Value)
+        if Value then 
+			_G.loop = true 
+			while _G.loop == true do wait(0.5) 
+				local args = { 
+
+					[1] = game:GetService("ReplicatedStorage"):WaitForChild("cPetShopFolder"):WaitForChild("Yellow Squeak") 
+
+				} 
+				game:GetService("ReplicatedStorage"):WaitForChild("cPetShopRemote"):InvokeServer(unpack(args)) 
+
+			end 
+		else 
+			_G.loop = false 
+		end 
+    end)
+
+	-- Silver Dog Toggle
+    window2:Toggle("(Advanced) Dark Golem", false, function(Value)
+        if Value then 
+			_G.loop = true 
+			while _G.loop == true do wait(0.5) 
+				local args = { 
+
+					[1] = game:GetService("ReplicatedStorage"):WaitForChild("cPetShopFolder"):WaitForChild("Dark Golem") 
+
+				} 
+				game:GetService("ReplicatedStorage"):WaitForChild("cPetShopRemote"):InvokeServer(unpack(args)) 
+
+			end 
+		else 
+			_G.loop = false 
+		end 
+    end)
+
+	-- Silver Dog Toggle
+    window2:Toggle("(Advanced) Pink Butterfly", false, function(Value)
+        if Value then 
+			_G.loop = true 
+			while _G.loop == true do wait(0.5) 
+				local args = { 
+
+					[1] = game:GetService("ReplicatedStorage"):WaitForChild("cPetShopFolder"):WaitForChild("Pink Butterfly") 
+
+				} 
+				game:GetService("ReplicatedStorage"):WaitForChild("cPetShopRemote"):InvokeServer(unpack(args)) 
+
+			end 
+		else 
+			_G.loop = false 
+		end 
+    end)
+
+	-- Silver Dog Toggle
+    window2:Toggle("(Rare) Golden Angel", false, function(Value)
+        if Value then 
+			_G.loop = true 
+			while _G.loop == true do wait(0.5) 
+				local args = { 
+
+					[1] = game:GetService("ReplicatedStorage"):WaitForChild("cPetShopFolder"):WaitForChild("Golden Angel") 
+
+				} 
+				game:GetService("ReplicatedStorage"):WaitForChild("cPetShopRemote"):InvokeServer(unpack(args)) 
+
+			end 
+		else 
+			_G.loop = false 
+		end 
+    end)
+
+	-- Silver Dog Toggle
+    window2:Toggle("(Rare) Orange Falcon", false, function(Value)
+        if Value then 
+			_G.loop = true 
+			while _G.loop == true do wait(0.5) 
+				local args = { 
+
+					[1] = game:GetService("ReplicatedStorage"):WaitForChild("cPetShopFolder"):WaitForChild("Orange Falcon") 
+
+				} 
+				game:GetService("ReplicatedStorage"):WaitForChild("cPetShopRemote"):InvokeServer(unpack(args)) 
+
+			end 
+		else 
+			_G.loop = false 
+		end 
+    end)
+
+	-- Silver Dog Toggle
+    window2:Toggle("(Epic) Golden Pheonix", false, function(Value)
+        if Value then 
+			_G.loop = true 
+			while _G.loop == true do wait(0.5) 
+				local args = { 
+
+					[1] = game:GetService("ReplicatedStorage"):WaitForChild("cPetShopFolder"):WaitForChild("Golden Pheonix") 
+
+				} 
+				game:GetService("ReplicatedStorage"):WaitForChild("cPetShopRemote"):InvokeServer(unpack(args)) 
+
+			end 
+		else 
+			_G.loop = false 
+		end 
+    end)
+
+	-- Silver Dog Toggle
+    window2:Toggle("(Epic) White Pheonix", false, function(Value)
+        if Value then 
+			_G.loop = true 
+			while _G.loop == true do wait(0.5) 
+				local args = { 
+
+					[1] = game:GetService("ReplicatedStorage"):WaitForChild("cPetShopFolder"):WaitForChild("White Pheonix") 
+
+				} 
+				game:GetService("ReplicatedStorage"):WaitForChild("cPetShopRemote"):InvokeServer(unpack(args)) 
+
+			end 
+		else 
+			_G.loop = false 
+		end 
+    end)
+
+	-- Silver Dog Toggle
+    window2:Toggle("(Unique) Flaming Hedgehog", false, function(Value)
+        if Value then 
+			_G.loop = true 
+			while _G.loop == true do wait(0.5) 
+				local args = { 
+
+					[1] = game:GetService("ReplicatedStorage"):WaitForChild("cPetShopFolder"):WaitForChild("Flaming Hedgehog") 
+
+				} 
+				game:GetService("ReplicatedStorage"):WaitForChild("cPetShopRemote"):InvokeServer(unpack(args)) 
+
+			end 
+		else 
+			_G.loop = false 
+		end 
+    end)
+
+	-- Silver Dog Toggle
+    window2:Toggle("(Unique) Quantum Dragon", false, function(Value)
+        if Value then 
+			_G.loop = true 
+			while _G.loop == true do wait(0.5) 
+				local args = { 
+
+					[1] = game:GetService("ReplicatedStorage"):WaitForChild("cPetShopFolder"):WaitForChild("Quantum Dragon") 
+
+				} 
+				game:GetService("ReplicatedStorage"):WaitForChild("cPetShopRemote"):InvokeServer(unpack(args)) 
+
+			end 
+		else 
+			_G.loop = false 
+		end 
+    end)
+
+	-- Silver Dog Toggle
+    window2:Toggle("(Omega) Ultimate Overdrive Bunny", false, function(Value)
+        if Value then 
+			_G.loop = true 
+			while _G.loop == true do wait(0.5) 
+				local args = { 
+
+					[1] = game:GetService("ReplicatedStorage"):WaitForChild("cPetShopFolder"):WaitForChild("Ultimate Overdrive Bunny") 
+
+				} 
+				game:GetService("ReplicatedStorage"):WaitForChild("cPetShopRemote"):InvokeServer(unpack(args)) 
+
+			end 
+		else 
+			_G.loop = false 
+		end 
+    end)
+
+	-- Silver Dog Toggle
+    window2:Toggle("(Omega) Swift Samurai", false, function(Value)
+        if Value then 
+			_G.loop = true 
+			while _G.loop == true do wait(0.5) 
+				local args = { 
+
+					[1] = game:GetService("ReplicatedStorage"):WaitForChild("cPetShopFolder"):WaitForChild("Swift Samurai") 
+
+				} 
+				game:GetService("ReplicatedStorage"):WaitForChild("cPetShopRemote"):InvokeServer(unpack(args)) 
+
+			end 
+		else 
+			_G.loop = false 
+		end 
+    end)
+
+	-- Destroy Library Button
+    window2:Button("Destroy lib", function()
+        window:Destroy()
+		window1:Destroy()
+		window2:Destroy()
+    end)
+
+else
+    -- Unauthorized user interface
+    local screenGui = Instance.new("ScreenGui")
+    screenGui.Parent = game.CoreGui
+
+    local frame = Instance.new("Frame")
+    frame.Size = UDim2.new(0, 200, 0, 100)
+    frame.Position = UDim2.new(0.5, 0, 0.5, 0)
+    frame.BackgroundColor3 = Color3.new(1, 0, 0)
+    frame.BackgroundTransparency = 0.5
+    frame.Parent = screenGui
+
+    local text = Instance.new("TextLabel")
+    text.Size = UDim2.new(1, 0, 0.5, 0)
+    text.Text = "Not Whitelisted"
+    text.TextColor3 = Color3.new(1, 1, 1)
+    text.Parent = frame
+
+    local button = Instance.new("TextButton")
+    button.Size = UDim2.new(1, 0, 0.5, 0)
+    button.Text = "Close"
+    button.TextColor3 = Color3.new(1, 1, 1)
+    button.Parent = frame
+
+    button.MouseButton1Click:Connect(function()
+        screenGui:Destroy()
+    end)
+end
