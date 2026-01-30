@@ -68,7 +68,7 @@ local function iWVlQKYqT(QIXLagHBSIp)
     local r = ''
     local f = b:find(x) - 1
     for i = 6, 1, -1 do
-      r = r .. ((floor(f / 2^i) - floor(f / 2^(i-1))) > 0 and '1' or '0')
+      r = r .. ((math.floor(f / 2^i) - math.floor(f / 2^(i-1))) > 0 and '1' or '0')
     end
     return r
   end)
